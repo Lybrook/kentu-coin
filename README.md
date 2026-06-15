@@ -35,3 +35,34 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # kentu-coin
+
+```
+kentu
+├─ .next
+│  └─ types
+│     ├─ cache-life.d.ts
+│     ├─ routes.d.ts
+│     └─ validator.ts
+├─ AGENTS.md
+├─ CLAUDE.md
+├─ README.md
+├─ eslint.config.mjs
+├─ next.config.ts
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.mjs
+├─ public
+│  ├─ file.svg
+│  ├─ globe.svg
+│  ├─ next.svg
+│  ├─ vercel.svg
+│  └─ window.svg
+├─ src
+│  └─ app
+│     ├─ favicon.ico
+│     ├─ globals.css
+│     ├─ layout.tsx
+│     └─ page.tsx
+└─ tsconfig.json
+
+```

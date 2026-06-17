@@ -5,16 +5,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
-import { Mail, Lock, Loader2 } from "lucide-react";
+import { Mail, Lock, Loader2, Globe } from "lucide-react";
 
-// Simple GitHub icon (inline) to avoid relying on a missing export from lucide-react
-function Github(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" {...props} xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.9 1.54 2.36 1.1 2.94.84.09-.65.35-1.1.63-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.115 2.51.337 1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.33-.01 2.4-.01 2.72 0 .26.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z" strokeWidth={0} />
-    </svg>
-  );
-}
+
 
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -82,29 +75,29 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-honeydew via-white to-honeydew flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-[#003153] to-slate-900 flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
         {/* Logo/Branding */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-evergreen mb-2" style={{ fontFamily: "var(--font-serif)" }}>
+          <h1 className="text-4xl font-bold text-[#FFC72C] mb-2" style={{ fontFamily: "var(--font-serif)" }}>
             Kenyan Wallet
           </h1>
-          <p className="text-gray-600 text-sm">Crypto & Mining Platform</p>
+          <p className="text-[#D8BFD8] text-sm">Crypto & Mining Platform</p>
         </div>
 
         {/* Auth Card */}
-        <div className="border-2 border-evergreen/20 rounded-lg shadow-lg bg-white p-8">
-          <h2 className="text-2xl font-bold text-evergreen mb-2" style={{ fontFamily: "var(--font-serif)" }}>
+        <div className="border-2 border-[#D8BFD8]/30 rounded-lg shadow-2xl bg-white p-8">
+          <h2 className="text-2xl font-bold text-[#003153] mb-2" style={{ fontFamily: "var(--font-serif)" }}>
             {isLogin ? "Welcome Back" : "Create Account"}
           </h2>
-          <p className="text-gray-600 text-sm mb-6">
+          <p className="text-slate-600 text-sm mb-6">
             {isLogin ? "Sign in to manage your crypto assets" : "Join Kenyan Wallet today"}
           </p>
 
           {isLogin ? (
             <form onSubmit={loginForm.handleSubmit(onLoginSubmit)} className="space-y-4">
               <div className="space-y-2">
-                <label htmlFor="login-email" className="text-evergreen font-semibold text-sm">
+                <label htmlFor="login-email" className="text-[#003153] font-semibold text-sm">
                   Email Address
                 </label>
                 <div className="relative">
@@ -113,7 +106,7 @@ export default function AuthPage() {
                     id="login-email"
                     type="email"
                     placeholder="your@email.com"
-                    className="w-full pl-10 pr-4 py-2 border border-evergreen/30 rounded-md focus:outline-none focus:border-evergreen"
+                    className="w-full pl-10 pr-4 py-2 border border-[#D8BFD8]/30 rounded-md focus:outline-none focus:border-[#FFC72C]"
                     {...loginForm.register("email")}
                   />
                 </div>
@@ -123,7 +116,7 @@ export default function AuthPage() {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="login-password" className="text-evergreen font-semibold text-sm">
+                <label htmlFor="login-password" className="text-[#003153] font-semibold text-sm">
                   Password
                 </label>
                 <div className="relative">
@@ -132,7 +125,7 @@ export default function AuthPage() {
                     id="login-password"
                     type="password"
                     placeholder="••••••••"
-                    className="w-full pl-10 pr-4 py-2 border border-evergreen/30 rounded-md focus:outline-none focus:border-evergreen"
+                    className="w-full pl-10 pr-4 py-2 border border-[#D8BFD8]/30 rounded-md focus:outline-none focus:border-[#FFC72C]"
                     {...loginForm.register("password")}
                   />
                 </div>
@@ -144,7 +137,7 @@ export default function AuthPage() {
               <Button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-evergreen hover:bg-evergreen-dark text-honeydew font-semibold py-2 h-10"
+                className="w-full bg-[#FFC72C] hover:bg-yellow-500 text-[#003153] font-semibold py-2 h-10"
               >
                 {isLoading ? (
                   <>
@@ -159,14 +152,14 @@ export default function AuthPage() {
           ) : (
             <form onSubmit={signupForm.handleSubmit(onSignupSubmit)} className="space-y-4">
               <div className="space-y-2">
-                <label htmlFor="signup-name" className="text-evergreen font-semibold text-sm">
+                <label htmlFor="signup-name" className="text-[#003153] font-semibold text-sm">
                   Full Name
                 </label>
                 <input
                   id="signup-name"
                   type="text"
                   placeholder="John Doe"
-                  className="w-full px-4 py-2 border border-evergreen/30 rounded-md focus:outline-none focus:border-evergreen"
+                  className="w-full px-4 py-2 border border-[#D8BFD8]/30 rounded-md focus:outline-none focus:border-[#FFC72C]"
                   {...signupForm.register("name")}
                 />
                 {signupForm.formState.errors.name && (
@@ -175,7 +168,7 @@ export default function AuthPage() {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="signup-email" className="text-evergreen font-semibold text-sm">
+                <label htmlFor="signup-email" className="text-[#003153] font-semibold text-sm">
                   Email Address
                 </label>
                 <div className="relative">
@@ -184,7 +177,7 @@ export default function AuthPage() {
                     id="signup-email"
                     type="email"
                     placeholder="your@email.com"
-                    className="w-full pl-10 pr-4 py-2 border border-evergreen/30 rounded-md focus:outline-none focus:border-evergreen"
+                    className="w-full pl-10 pr-4 py-2 border border-[#D8BFD8]/30 rounded-md focus:outline-none focus:border-[#FFC72C]"
                     {...signupForm.register("email")}
                   />
                 </div>
@@ -194,7 +187,7 @@ export default function AuthPage() {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="signup-password" className="text-evergreen font-semibold text-sm">
+                <label htmlFor="signup-password" className="text-[#003153] font-semibold text-sm">
                   Password
                 </label>
                 <div className="relative">
@@ -203,17 +196,17 @@ export default function AuthPage() {
                     id="signup-password"
                     type="password"
                     placeholder="••••••••"
-                    className="w-full pl-10 pr-4 py-2 border border-evergreen/30 rounded-md focus:outline-none focus:border-evergreen"
+                    className="w-full pl-10 pr-4 py-2 border border-[#D8BFD8]/30 rounded-md focus:outline-none focus:border-[#FFC72C]"
                     {...signupForm.register("password")}
                   />
                 </div>
                 {signupForm.formState.errors.password && (
-                  <p className="text-sm text-red-600">{signupForm.formState.errors.password.message}</p>
+                  <p className="text-sm text-[#FF004F]">{signupForm.formState.errors.password.message}</p>
                 )}
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="signup-confirm" className="text-evergreen font-semibold text-sm">
+                <label htmlFor="signup-confirm" className="text-[#003153] font-semibold text-sm">
                   Confirm Password
                 </label>
                 <div className="relative">
@@ -222,19 +215,19 @@ export default function AuthPage() {
                     id="signup-confirm"
                     type="password"
                     placeholder="••••••••"
-                    className="w-full pl-10 pr-4 py-2 border border-evergreen/30 rounded-md focus:outline-none focus:border-evergreen"
+                    className="w-full pl-10 pr-4 py-2 border border-[#D8BFD8]/30 rounded-md focus:outline-none focus:border-[#FFC72C]"
                     {...signupForm.register("confirmPassword")}
                   />
                 </div>
                 {signupForm.formState.errors.confirmPassword && (
-                  <p className="text-sm text-red-600">{signupForm.formState.errors.confirmPassword.message}</p>
+                  <p className="text-sm text-[#FF004F]">{signupForm.formState.errors.confirmPassword.message}</p>
                 )}
               </div>
 
               <Button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-evergreen hover:bg-evergreen-dark text-honeydew font-semibold py-2 h-10"
+                className="w-full bg-[#FFC72C] hover:bg-yellow-500 text-[#003153] font-semibold py-2 h-10"
               >
                 {isLoading ? (
                   <>
@@ -251,32 +244,31 @@ export default function AuthPage() {
           {/* Divider */}
           <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-evergreen/20"></div>
+              <div className="w-full border-t border-[#D8BFD8]/20"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-white text-gray-600">Or continue with</span>
+              <span className="px-2 bg-white text-slate-600">Or continue with</span>
             </div>
           </div>
 
-          {/* OAuth Button */}
+          {/* Google Button */}
           <Button
             type="button"
             variant="outline"
-            className="w-full border-evergreen/30 hover:bg-honeydew text-evergreen font-semibold py-2 h-10"
+            className="w-full border-[#D8BFD8] hover:bg-[#D8BFD8]/20 text-[#003153] font-semibold py-2 h-10"
           >
-            <Github className="mr-2 h-4 w-4" />
-            Sign with OAuth
+            <Globe className="mr-2 h-4 w-4" />
+            Sign with Google
           </Button>
 
           {/* Toggle Form */}
           <div className="mt-6 text-center">
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-slate-600">
               {isLogin ? "Don't have an account? " : "Already have an account? "}
               <button
                 type="button"
                 onClick={() => setIsLogin(!isLogin)}
-                className="text-evergreen font-semibold hover:text-evergreen-dark transition-colors"
-              >
+                className="text-[#FFC72C] font-semibold hover:text-yellow-400 transition-colors">
                 {isLogin ? "Sign up" : "Sign in"}
               </button>
             </p>
@@ -284,8 +276,8 @@ export default function AuthPage() {
         </div>
 
         {/* Footer */}
-        <div className="mt-8 text-center text-xs text-gray-600">
-          <p>© 2024 Kenyan Wallet. All rights reserved.</p>
+        <div className="mt-8 text-center text-xs text-[#D8BFD8]/70">
+          <p>© {new Date().getFullYear()} Kenyan Wallet. All rights reserved.</p>
         </div>
       </div>
     </div>

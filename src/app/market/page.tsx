@@ -75,16 +75,16 @@ export default function MarketPage() {
   };
 
   return (
-    <div className="min-h-screen bg-honeydew">
+    <div className="min-h-screen bg-slate-50">
       {/* Header */}
-      <header className="bg-white border-b border-evergreen/10 sticky top-0 z-50">
+      <header className="bg-white border-b border-[#D8BFD8]/30 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-evergreen" style={{ fontFamily: "var(--font-serif)" }}>
+          <h1 className="text-2xl font-bold text-[#003153]" style={{ fontFamily: "var(--font-serif)" }}>
             Market Overview
           </h1>
           <Button
             onClick={handleRefresh}
-            className="bg-evergreen hover:bg-evergreen-dark text-honeydew font-semibold"
+            className="bg-[#003153] hover:bg-[#001a2e] text-white font-semibold"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
             Refresh
@@ -96,7 +96,7 @@ export default function MarketPage() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Last Updated */}
         <div className="mb-6 text-sm text-gray-600">
-          Last updated: <span className="font-semibold text-evergreen">{lastUpdated}</span>
+          Last updated: <span className="font-semibold text-[#003153]">{lastUpdated}</span>
         </div>
 
         {/* Crypto Ticker */}
@@ -104,12 +104,12 @@ export default function MarketPage() {
           {cryptoData.map((crypto) => (
             <div
               key={crypto.symbol}
-              className="bg-white rounded-lg border-2 border-evergreen/20 p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white rounded-lg border-2 border-[#003153]/20 p-6 shadow-sm hover:shadow-md transition-shadow"
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h3 className="text-lg font-bold text-evergreen" style={{ fontFamily: "var(--font-serif)" }}>
+                  <h3 className="text-lg font-bold text-[#003153]" style={{ fontFamily: "var(--font-serif)" }}>
                     {crypto.symbol}
                   </h3>
                   <p className="text-xs text-gray-600">{crypto.name}</p>
@@ -127,7 +127,7 @@ export default function MarketPage() {
 
               {/* Price */}
               <div className="mb-4">
-                <p className="text-3xl font-bold text-evergreen" style={{ fontFamily: "var(--font-serif)" }}>
+                <p className="text-3xl font-bold text-[#003153]" style={{ fontFamily: "var(--font-serif)" }}>
                   {crypto.price}
                 </p>
               </div>
@@ -160,11 +160,11 @@ export default function MarketPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-xs text-gray-600">Market Cap</p>
-                  <p className="font-semibold text-evergreen text-sm">{crypto.marketCap}</p>
+                  <p className="font-semibold text-[#003153] text-sm">{crypto.marketCap}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-600">24h Volume</p>
-                  <p className="font-semibold text-evergreen text-sm">{crypto.volume}</p>
+                  <p className="text-xs text-gray-600">Volume</p>
+                  <p className="font-semibold text-[#003153] text-sm">{crypto.volume}</p>
                 </div>
               </div>
             </div>
@@ -172,26 +172,26 @@ export default function MarketPage() {
         </div>
 
         {/* Market Info */}
-        <div className="mt-8 bg-white rounded-lg border-2 border-evergreen/20 p-6 shadow-sm">
-          <h2 className="text-lg font-bold text-evergreen mb-4" style={{ fontFamily: "var(--font-serif)" }}>
+        <div className="mt-8 bg-white rounded-lg border-2 border-[#003153]/20 p-6 shadow-sm">
+          <h2 className="text-lg font-bold text-[#003153] mb-4" style={{ fontFamily: "var(--font-serif)" }}>
             Market Information
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <h3 className="font-semibold text-evergreen mb-2">Global Market Cap</h3>
-              <p className="text-2xl font-bold text-gold" style={{ fontFamily: "var(--font-serif)" }}>
+              <h3 className="font-semibold text-[#003153] mb-2">Global Market Cap</h3>
+              <p className="text-2xl font-bold text-[#FFC72C]" style={{ fontFamily: "var(--font-serif)" }}>
                 $1.2T
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-evergreen mb-2">24h Volume</h3>
-              <p className="text-2xl font-bold text-gold" style={{ fontFamily: "var(--font-serif)" }}>
+              <h3 className="font-semibold text-[#003153] mb-2">24h Volume</h3>
+              <p className="text-2xl font-bold text-[#FFC72C]" style={{ fontFamily: "var(--font-serif)" }}>
                 $45.8B
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-evergreen mb-2">BTC Dominance</h3>
-              <p className="text-2xl font-bold text-gold" style={{ fontFamily: "var(--font-serif)" }}>
+              <h3 className="font-semibold text-[#003153] mb-2">BTC Dominance</h3>
+              <p className="text-2xl font-bold text-[#FFC72C]" style={{ fontFamily: "var(--font-serif)" }}>
                 42.5%
               </p>
             </div>

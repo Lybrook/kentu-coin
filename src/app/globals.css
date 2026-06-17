@@ -5,13 +5,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-honeydew: #F0FFF4;
-  --color-evergreen: #2D6A4F;
-  --color-evergreen-dark: #1B4332;
-  --color-evergreen-light: #40916C;
-  --color-gold: #D4AF37;
-  --color-gold-light: #E8C547;
-  --color-gold-dark: #B8941F;
+  --color-honeydew: #FFFFFF;
+  --color-evergreen: #003153;
+  --color-evergreen-dark: #001a2e;
+  --color-evergreen-light: #004080;
+  --color-gold: #FFC72C;
+  --color-gold-light: #FFD966;
+  --color-gold-dark: #E6B800;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);

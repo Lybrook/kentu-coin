@@ -37,26 +37,26 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-honeydew via-white to-honeydew">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
       {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-sm border-b border-evergreen/10 sticky top-0 z-50">
+      <nav className="bg-white/80 backdrop-blur-sm border-b border-[#D8BFD8]/30 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-evergreen flex items-center justify-center text-honeydew font-bold">
+            <div className="w-10 h-10 rounded-full bg-[#003153] flex items-center justify-center text-[#FFC72C] font-bold">
               KW
             </div>
-            <span className="text-xl font-bold text-evergreen hidden sm:inline" style={{ fontFamily: "var(--font-serif)" }}>
+            <span className="text-xl font-bold text-[#003153] hidden sm:inline" style={{ fontFamily: "var(--font-serif)" }}>
               Kenyan Wallet
             </span>
           </div>
           <div className="flex gap-4">
             <Link href="/auth">
-              <Button variant="outline" className="border-evergreen text-evergreen hover:bg-honeydew">
+              <Button variant="outline" className="border-[#003153] text-[#003153] hover:bg-slate-100">
                 Sign In
               </Button>
             </Link>
             <Link href="/auth">
-              <Button className="bg-evergreen hover:bg-evergreen-dark text-honeydew">
+              <Button className="bg-[#003153] hover:bg-[#001a2e] text-white">
                 Get Started
               </Button>
             </Link>
@@ -70,7 +70,7 @@ export default function LandingPage() {
           {/* Left Content */}
           <div>
             <h1
-              className="text-5xl md:text-6xl font-bold text-evergreen mb-6 leading-tight"
+              className="text-5xl md:text-6xl font-bold text-[#003153] mb-6 leading-tight"
               style={{ fontFamily: "var(--font-serif)" }}
             >
               Your Crypto Wallet for Kenya
@@ -80,14 +80,14 @@ export default function LandingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/auth">
-                <Button className="bg-evergreen hover:bg-evergreen-dark text-honeydew font-semibold py-6 h-auto text-lg w-full sm:w-auto">
+                <Button className="bg-[#003153] hover:bg-[#001a2e] text-white font-semibold py-6 h-auto text-lg w-full sm:w-auto">
                   Start Trading Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Button
                 variant="outline"
-                className="border-2 border-evergreen text-evergreen hover:bg-honeydew font-semibold py-6 h-auto text-lg"
+                className="border-2 border-[#003153] text-[#003153] hover:bg-slate-100 font-semibold py-6 h-auto text-lg"
               >
                 Learn More
               </Button>
@@ -96,29 +96,29 @@ export default function LandingPage() {
 
           {/* Right Visual */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-evergreen/20 to-gold/20 rounded-2xl p-8 border-2 border-evergreen/20">
+            <div className="bg-gradient-to-br from-[#003153]/10 to-[#FFC72C]/10 rounded-2xl p-8 border-2 border-[#003153]/20">
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-semibold text-gray-600">Total Balance</span>
-                    <span className="text-xs bg-honeydew text-evergreen px-3 py-1 rounded-full">Live</span>
+                    <span className="text-xs bg-blue-50 text-[#003153] px-3 py-1 rounded-full">Live</span>
                   </div>
-                  <p className="text-3xl font-bold text-evergreen" style={{ fontFamily: "var(--font-serif)" }}>
+                  <p className="text-3xl font-bold text-[#003153]" style={{ fontFamily: "var(--font-serif)" }}>
                     $12,450.50
                   </p>
                   <div className="pt-4 border-t border-gray-100">
                     <div className="grid grid-cols-3 gap-4">
                       <div>
                         <p className="text-xs text-gray-600">BTC</p>
-                        <p className="font-bold text-evergreen">0.35</p>
+                        <p className="font-bold text-[#003153]">0.35</p>
                       </div>
                       <div>
                         <p className="text-xs text-gray-600">ETH</p>
-                        <p className="font-bold text-evergreen">2.45</p>
+                        <p className="font-bold text-[#003153]">2.45</p>
                       </div>
                       <div>
                         <p className="text-xs text-gray-600">KES</p>
-                        <p className="font-bold text-evergreen">612.50</p>
+                        <p className="font-bold text-[#003153]">612.50</p>
                       </div>
                     </div>
                   </div>
@@ -134,7 +134,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2
-              className="text-4xl md:text-5xl font-bold text-evergreen mb-4"
+              className="text-4xl md:text-5xl font-bold text-[#003153] mb-4"
               style={{ fontFamily: "var(--font-serif)" }}
             >
               Why Choose Kenyan Wallet?
@@ -150,12 +150,12 @@ export default function LandingPage() {
               return (
                 <div
                   key={idx}
-                  className="border-2 border-evergreen/20 rounded-lg p-8 hover:shadow-lg transition-shadow"
+                  className="border-2 border-[#003153]/20 rounded-lg p-8 hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-honeydew flex items-center justify-center mb-4">
-                    <Icon className="h-6 w-6 text-evergreen" />
+                  <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+                    <Icon className="h-6 w-6 text-[#003153]" />
                   </div>
-                  <h3 className="text-xl font-bold text-evergreen mb-2">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-[#003153] mb-2">{feature.title}</h3>
                   <p className="text-gray-700">{feature.description}</p>
                 </div>
               );
@@ -165,19 +165,19 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-evergreen to-evergreen-dark py-20 md:py-32">
+      <section className="bg-gradient-to-r from-[#003153] to-[#001a2e] py-20 md:py-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2
-            className="text-4xl md:text-5xl font-bold text-honeydew mb-6"
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
             style={{ fontFamily: "var(--font-serif)" }}
           >
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-honeydew/90 mb-8">
+          <p className="text-xl text-slate-200 mb-8">
             Join thousands of Kenyan crypto users managing their assets securely
           </p>
           <Link href="/auth">
-            <Button className="bg-gold hover:bg-gold-dark text-evergreen-dark font-semibold py-6 h-auto text-lg px-8">
+            <Button className="bg-[#FFC72C] hover:bg-yellow-500 text-[#003153] font-semibold py-6 h-auto text-lg px-8">
               Create Your Wallet Today
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -186,39 +186,39 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-evergreen/10 py-12">
+      <footer className="bg-white border-t border-[#D8BFD8]/30 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-evergreen mb-4">Product</h3>
+              <h3 className="font-bold text-[#003153] mb-4">Product</h3>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link href="#" className="hover:text-evergreen">Features</Link></li>
-                <li><Link href="#" className="hover:text-evergreen">Pricing</Link></li>
-                <li><Link href="#" className="hover:text-evergreen">Security</Link></li>
+                <li><Link href="#" className="hover:text-[#003153]">Features</Link></li>
+                <li><Link href="#" className="hover:text-[#003153]">Pricing</Link></li>
+                <li><Link href="#" className="hover:text-[#003153]">Security</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-evergreen mb-4">Company</h3>
+              <h3 className="font-bold text-[#003153] mb-4">Company</h3>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link href="#" className="hover:text-evergreen">About</Link></li>
-                <li><Link href="#" className="hover:text-evergreen">Blog</Link></li>
-                <li><Link href="#" className="hover:text-evergreen">Contact</Link></li>
+                <li><Link href="#" className="hover:text-[#003153]">About</Link></li>
+                <li><Link href="#" className="hover:text-[#003153]">Blog</Link></li>
+                <li><Link href="#" className="hover:text-[#003153]">Contact</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-evergreen mb-4">Legal</h3>
+              <h3 className="font-bold text-[#003153] mb-4">Legal</h3>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link href="#" className="hover:text-evergreen">Privacy</Link></li>
-                <li><Link href="#" className="hover:text-evergreen">Terms</Link></li>
-                <li><Link href="#" className="hover:text-evergreen">Cookies</Link></li>
+                <li><Link href="#" className="hover:text-[#003153]">Privacy</Link></li>
+                <li><Link href="#" className="hover:text-[#003153]">Terms</Link></li>
+                <li><Link href="#" className="hover:text-[#003153]">Cookies</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-evergreen mb-4">Follow Us</h3>
+              <h3 className="font-bold text-[#003153] mb-4">Follow Us</h3>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li><Link href="#" className="hover:text-evergreen">Twitter</Link></li>
-                <li><Link href="#" className="hover:text-evergreen">Discord</Link></li>
-                <li><Link href="#" className="hover:text-evergreen">Telegram</Link></li>
+                <li><Link href="#" className="hover:text-[#003153]">Twitter</Link></li>
+                <li><Link href="#" className="hover:text-[#003153]">Discord</Link></li>
+                <li><Link href="#" className="hover:text-[#003153]">Telegram</Link></li>
               </ul>
             </div>
           </div>

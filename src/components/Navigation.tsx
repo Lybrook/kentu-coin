@@ -17,15 +17,15 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-white border-b border-evergreen/10 sticky top-0 z-50">
+    <nav className="bg-white border-b border-[#D8BFD8]/30 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/dashboard" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-evergreen flex items-center justify-center text-honeydew font-bold">
+            <div className="w-10 h-10 rounded-full bg-[#003153] flex items-center justify-center text-[#FFC72C] font-bold">
               KW
             </div>
-            <span className="text-xl font-bold text-evergreen hidden sm:inline" style={{ fontFamily: "var(--font-serif)" }}>
+            <span className="text-xl font-bold text-[#003153] hidden sm:inline" style={{ fontFamily: "var(--font-serif)" }}>
               Kenyan Wallet
             </span>
           </Link>
@@ -36,7 +36,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-600 hover:text-evergreen font-medium transition-colors"
+                className="text-gray-600 hover:text-[#003153] font-medium transition-colors"
               >
                 {link.label}
               </Link>
@@ -46,31 +46,31 @@ export default function Navigation() {
           {/* Right Side - Wallet Info & User Dropdown */}
           <div className="flex items-center gap-4">
             {/* Wallet Address (Hidden on mobile) */}
-            <div className="hidden sm:flex items-center gap-2 px-3 py-2 bg-honeydew rounded-lg">
-              <Wallet className="h-4 w-4 text-evergreen" />
-              <span className="text-xs font-mono text-evergreen">0x1234...5678</span>
+            <div className="hidden sm:flex items-center gap-2 px-3 py-2 bg-gray-100 rounded-lg">
+              <Wallet className="h-4 w-4 text-[#003153]" />
+              <span className="text-xs font-mono text-[#003153]">0x1234...5678</span>
             </div>
 
             {/* User Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="w-10 h-10 rounded-full bg-evergreen text-honeydew flex items-center justify-center font-bold hover:bg-evergreen-dark transition-colors"
+                className="w-10 h-10 rounded-full bg-[#003153] text-[#FFC72C] flex items-center justify-center font-bold hover:bg-[#001a2e] transition-colors"
               >
                 JD
               </button>
 
               {/* Dropdown Menu */}
               {isDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-evergreen/10 py-2">
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-[#D8BFD8]/30 py-2">
                   <Link
                     href="/profile"
-                    className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-honeydew transition-colors"
+                    className="flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                   >
                     <Settings className="h-4 w-4" />
                     <span>Settings</span>
                   </Link>
-                  <button className="w-full flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-honeydew transition-colors">
+                  <button className="w-full flex items-center gap-3 px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
                     <LogOut className="h-4 w-4" />
                     <span>Logout</span>
                   </button>
@@ -81,12 +81,12 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 hover:bg-honeydew rounded-lg transition-colors"
+              className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
             >
               {isOpen ? (
-                <X className="h-6 w-6 text-evergreen" />
+                <X className="h-6 w-6 text-[#003153]" />
               ) : (
-                <Menu className="h-6 w-6 text-evergreen" />
+                <Menu className="h-6 w-6 text-[#003153]" />
               )}
             </button>
           </div>
@@ -99,7 +99,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-2 text-gray-600 hover:bg-honeydew rounded-lg transition-colors"
+                className="block px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

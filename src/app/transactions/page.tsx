@@ -81,11 +81,11 @@ export default function TransactionsPage() {
   });
 
   return (
-    <div className="min-h-screen bg-honeydew">
+    <div className="min-h-screen bg-slate-50">
       {/* Header */}
-      <header className="bg-white border-b border-evergreen/10 sticky top-0 z-50">
+      <header className="bg-white border-b border-[#D8BFD8]/30 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <h1 className="text-2xl font-bold text-evergreen" style={{ fontFamily: "var(--font-serif)" }}>
+          <h1 className="text-2xl font-bold text-[#003153]" style={{ fontFamily: "var(--font-serif)" }}>
             Transaction History
           </h1>
         </div>
@@ -94,7 +94,7 @@ export default function TransactionsPage() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Filters and Search */}
-        <div className="bg-white rounded-lg border-2 border-evergreen/20 p-6 shadow-sm mb-6">
+        <div className="bg-white rounded-lg border-2 border-[#003153]/20 p-6 shadow-sm mb-6">
           <div className="flex flex-col md:flex-row gap-4 items-center">
             {/* Search */}
             <div className="flex-1 relative">
@@ -104,7 +104,7 @@ export default function TransactionsPage() {
                 placeholder="Search by asset or amount..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-evergreen/30 rounded-md focus:outline-none focus:border-evergreen"
+                className="w-full pl-10 pr-4 py-2 border border-[#003153]/30 rounded-md focus:outline-none focus:border-[#003153]"
               />
             </div>
 
@@ -116,8 +116,8 @@ export default function TransactionsPage() {
                   onClick={() => setFilter(f)}
                   className={`capitalize ${
                     filter === f
-                      ? "bg-evergreen text-honeydew"
-                      : "bg-gray-100 text-evergreen hover:bg-gray-200"
+                      ? "bg-[#003153] text-white"
+                      : "bg-gray-100 text-[#003153] hover:bg-gray-200"
                   }`}
                 >
                   {f}
@@ -128,23 +128,23 @@ export default function TransactionsPage() {
         </div>
 
         {/* Transactions Table */}
-        <div className="bg-white rounded-lg border-2 border-evergreen/20 shadow-sm overflow-hidden">
+        <div className="bg-white rounded-lg border-2 border-[#003153]/20 shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-honeydew border-b border-evergreen/10">
+              <thead className="bg-blue-50 border-b border-[#D8BFD8]/30">
                 <tr>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-evergreen">Type</th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-evergreen">Asset</th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-evergreen">Amount</th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-evergreen">Address</th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-evergreen">Date & Time</th>
-                  <th className="px-6 py-4 text-left text-xs font-semibold text-evergreen">Status</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-[#003153]">Type</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-[#003153]">Asset</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-[#003153]">Amount</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-[#003153]">Address</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-[#003153]">Date & Time</th>
+                  <th className="px-6 py-4 text-left text-xs font-semibold text-[#003153]">Status</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {filteredTransactions.length > 0 ? (
                   filteredTransactions.map((tx) => (
-                    <tr key={tx.id} className="hover:bg-honeydew/50 transition-colors">
+                    <><tr key={tx.id} className="hover:bg-blue-50 transition-colors">
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-2">
                           {tx.type === "sent" && (
@@ -154,15 +154,14 @@ export default function TransactionsPage() {
                             <ArrowDownLeft className="h-5 w-5 text-green-600" />
                           )}
                           {tx.type === "mining" && (
-                            <Zap className="h-5 w-5 text-gold" />
+                            <Zap className />)}\"h-5 w-5 text-[#FFC72C]\" />
                           )}
-                          <span className="font-semibold text-evergreen capitalize">{tx.type}</span>
-                        </div>
-                      </td>
-                      <td className="px-6 py-4 font-semibold text-evergreen">{tx.asset}</td>
-                      <td className="px-6 py-4">
+                          <span className />\"font-semibold text-[#003153] capitalize\">{tx.type}</span>
+                      </div>
+                    </td><td className /></>\"px-6 py-4 font-semibold text-[#003153]\">{tx.asset}</td>
+                      <td className=\"px-6 py-4\">
                         <div>
-                          <p className="font-semibold text-evergreen">{tx.amount}</p>
+                          <p className=\"font-semibold text-[#003153]\">{tx.amount}</p>
                           <p className="text-xs text-gray-600">{tx.value}</p>
                         </div>
                       </td>

@@ -154,14 +154,15 @@ export default function TransactionsPage() {
                             <ArrowDownLeft className="h-5 w-5 text-green-600" />
                           )}
                           {tx.type === "mining" && (
-                            <Zap className />)}\"h-5 w-5 text-[#FFC72C]\" />
+                            <Zap className="h-5 w-5 text-[#FFC72C]" />
                           )}
-                          <span className />\"font-semibold text-[#003153] capitalize\">{tx.type}</span>
-                      </div>
-                    </td><td className /></>\"px-6 py-4 font-semibold text-[#003153]\">{tx.asset}</td>
-                      <td className=\"px-6 py-4\">
+                          <span className="font-semibold text-[#003153] capitalize">{tx.type}</span>
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 font-semibold text-[#003153]">{tx.asset}</td>
+                      <td className="px-6 py-4">
                         <div>
-                          <p className=\"font-semibold text-[#003153]\">{tx.amount}</p>
+                          <p className="font-semibold text-[#003153]">{tx.amount}</p>
                           <p className="text-xs text-gray-600">{tx.value}</p>
                         </div>
                       </td>
